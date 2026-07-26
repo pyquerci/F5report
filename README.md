@@ -67,7 +67,7 @@ No Python installation is needed, just download and run f5report.exe. For conven
 You have two ways to get them:
 
 - **Manually**, hitting each URL with a browser or a tool like `curl`/`Postman` (HTTP Basic Auth against the device), saving each response as the corresponding local JSON file.
-- **With [`sfetchapi`](https://github.com/pyquerci/sfetchapi)**, another tool of mine built exactly for this: it reads a simple YAML file listing `filename: url` pairs and downloads all of them in one run, using a single set of credentials, and pretty-prints the JSON automatically. Its own README uses these very 8 endpoints as a worked example, so it's a drop-in way to produce all the input files `f5report` expects without manually calling the API eight times. Much faster and less error-prone than doing it by hand.
+- **With [`sfetchapi`](https://github.com/pyquerci/sfetchapi)**, another tool of mine built exactly for this: it reads a simple YAML file listing `filename: url` pairs and downloads all of them in one run, using a single set of credentials, and pretty-prints the JSON automatically.
 
 ---
 
