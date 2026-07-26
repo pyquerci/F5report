@@ -51,9 +51,7 @@ No Python installation is needed, just download and run f5report.exe. For conven
 
 ## Data Sources
 
-[#data-sources](#data-sources)
-
-`f5report` does not talk to the F5 device itself — it only consumes JSON files that you must generate beforehand. These files come straight from the BIG-IP iControl REST API:
+`f5report` does not talk to the F5 device itself, it only consumes JSON files that you must generate beforehand. These files come straight from the BIG-IP iControl REST API:
 
 | File (default name) | Endpoint |
 | --- | --- |
