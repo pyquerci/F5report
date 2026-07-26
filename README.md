@@ -87,7 +87,7 @@ f5report.py [-h]
 | `-h, --help` | Show the help message and exit. |
 | `-a, --about` | Show author, version, project URL and license information. |
 | `-c, --config VIPS POOLS NODES IFS ROUTES DCS VSTATS PSTATS` | Custom JSON input files, in this exact order. Accepts plain filenames (looked up in the current directory) or full/relative paths. Defaults to `vips.json`, `pools.json`, `nodes.json`, `ifs.json`, `routes.json`, `dcs.json`, `vstats.json` and `pstats.json` in the current directory. |
-| `-e, --export [NAME]` | Export the LTM report to an xlsx file. This argument is Required. Defaults to `report.xlsx` if no name is given. |
+| `-e, --export [NAME]` | Export the LTM report to an xlsx file. This argument is required. Defaults to `report.xlsx` if no name is given. |
 
 If a JSON file is not found, cannot be read due to permission issues, or is not valid JSON, `f5report` exits with a clear error message.
 
@@ -111,16 +111,7 @@ f5report.py -a
 
 ## How It Works
 
-For each of the 8 JSON files, `f5report` walks the `items` (or `entries`, for the two stats files) collection and rebuilds every object into a flat, readable record:
-
-- **Partitions** are stripped from every reference (`/Common/my_vip` → `my_vip`), and the **route domain** (`%n`) is extracted separately when present in an address.
-- **Netmasks** on virtual servers are converted from dotted-decimal to CIDR prefix length.
-- **Self-IP networks** (`ifs.json`) are parsed with `ipaddress` to compute their actual network address, and each **static route**'s next-hop is looked up against them to resolve the connected network and VLAN.
-- **SSL certificate expiration timestamps** are converted from epoch to ISO 8601 UTC.
-- **Statistics** (`vstats.json`, `pstats.json`) are unnested from F5's `nestedStats.entries` structure; for pools, each member's stats are extracted individually and merged into the parent pool row as newline-separated lists, aligned by position with the member name/monitor/status columns.
-- Any field that cannot be found is written as `*none`, an empty list of VLANs is written as `*all`, and any value that cannot be parsed at all is written as `*error` — so gaps in the source data are visible in the spreadsheet rather than causing a crash.
-
-Each object type is written to its own worksheet with a frozen header row, an autofilter, and word-wrap enabled, so multi-value fields (members, pools, VLANs, rules...) stay readable.
+For each of the 8 JSON files, `f5report` extracts the main information and writes it to a dedicated sheet in the Excel report: `VIPs`, `POOLs`, `NODEs`, `DCs`, `IFs`, `ROUTEs`, `VSTATs` and `PSTATs`. Along the way, a few values are cleaned up to make them easier to read, partition prefixes are stripped from names, netmasks are converted to CIDR prefixes, and statistics are matched to the corresponding VIP, pool or member. Each sheet has a frozen header row and an autofilter enabled, so you can sort and filter the data directly in Excel.
 
 ---
 
