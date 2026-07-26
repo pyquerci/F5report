@@ -16,13 +16,9 @@ It is particularly useful for **documentation, assessment, audits and migration 
 
 - Parses 8 different F5 iControl REST API JSON exports in a single run: virtual servers, pools, nodes, self-IPs, routes, SSL certificates, virtual server stats and pool member stats
 - Produces a single `.xlsx` workbook with one sheet per object type (`VIPs`, `POOLs`, `NODEs`, `DCs`, `IFs`, `ROUTEs`, `VSTATs`, `PSTATs`)
-- Strips partition prefixes and resolves route domains (`%n`) for every object
-- Converts dotted-decimal netmasks to CIDR prefixes
-- Resolves each static route's gateway to its connected self-IP network and VLAN
-- Merges live statistics (connections, bits/packets in/out, availability status) with the corresponding VIP/pool/member configuration
+- Merges live statistics with the corresponding configuration
 - Frozen header row and autofilter enabled on every sheet for quick sorting/filtering
 - Missing or malformed fields are clearly flagged (`*none`, `*all`, `*error`) instead of failing silently
-- Custom input file paths via CLI argument
 
 ---
 
@@ -43,13 +39,13 @@ pip install xlsxwriter
 
 ### Windows
 
-A pre-compiled Windows executable can be built with PyInstaller using the command:
+A pre-compiled Windows executable is included in the repository, built with PyInstaller 6.21.0 using the command:
 
 ```
 pyinstaller --onefile f5report.py
 ```
 
-No Python installation is needed if you use the compiled `f5report.exe`. For convenience, you can add it to a folder in your system `PATH` to invoke it from any directory; for example, I keep mine in `C:\Tools\f5report`.
+No Python installation is needed, just download and run f5finder.exe. For convenience, you can add it to a folder in your system PATH to invoke it from any directory; for example, I keep mine in C:\Tools\f5report.
 
 ---
 
