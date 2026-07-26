@@ -111,8 +111,6 @@ f5report.py -a
 
 ## How It Works
 
-[#how-it-works](#how-it-works)
-
 For each of the 8 JSON files, `f5report` walks the `items` (or `entries`, for the two stats files) collection and rebuilds every object into a flat, readable record:
 
 - **Partitions** are stripped from every reference (`/Common/my_vip` → `my_vip`), and the **route domain** (`%n`) is extracted separately when present in an address.
@@ -123,6 +121,12 @@ For each of the 8 JSON files, `f5report` walks the `items` (or `entries`, for th
 - Any field that cannot be found is written as `*none`, an empty list of VLANs is written as `*all`, and any value that cannot be parsed at all is written as `*error` — so gaps in the source data are visible in the spreadsheet rather than causing a crash.
 
 Each object type is written to its own worksheet with a frozen header row, an autofilter, and word-wrap enabled, so multi-value fields (members, pools, VLANs, rules...) stay readable.
+
+---
+
+## Production Testing and Compatibility
+
+`f5report` has been tested against a production F5 BIG-IP configuration extracted from a system running version **17.5.1.5-0.0.6**, virtualized on **F5OS 1.8.3-23493**, on **F5-R5800** hardware. No issues were encountered during its use. The provisioned modules in use were `Local Traffic (LTM)`, `Access Policy (APM)`, `iRules Language Extensions (iRulesLX)`, and `Application Visibility and Reporting (AVR)`. Keep in mind that other versions may rename fields, change nesting, or restructure the API response, which could cause parsing errors or silently wrong output.
 
 ---
 
