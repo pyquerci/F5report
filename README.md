@@ -87,7 +87,7 @@ f5report.py [-h]
 | `-h, --help` | Show the help message and exit. |
 | `-a, --about` | Show author, version, project URL and license information. |
 | `-c, --config VIPS POOLS NODES IFS ROUTES DCS VSTATS PSTATS` | Custom JSON input files, in this exact order. Accepts plain filenames (looked up in the current directory) or full/relative paths. Defaults to `vips.json`, `pools.json`, `nodes.json`, `ifs.json`, `routes.json`, `dcs.json`, `vstats.json` and `pstats.json` in the current directory. |
-| `-e, --export [NAME]` | Export the LTM report to an xlsx file. Required. Defaults to `report.xlsx` if no name is given. |
+| `-e, --export [NAME]` | Export the LTM report to an xlsx file. This argument is Required. Defaults to `report.xlsx` if no name is given. |
 
 If a JSON file is not found, cannot be read due to permission issues, or is not valid JSON, `f5report` exits with a clear error message.
 
