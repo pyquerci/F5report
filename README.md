@@ -6,9 +6,9 @@ A command-line tool to export the main information from an F5 BIG-IP device to a
 
 ## Overview
 
-`f5report` reads a set of JSON files exported from an F5 BIG-IP device's iControl REST API (virtual servers, pools, nodes, self-IPs, routes, SSL certificates and LTM statistics) and builds a single, multi-sheet `.xlsx` report. Each configuration object is normalized and enriched — partitions are stripped from names, route domains are extracted, netmasks are converted to prefixes, VLANs are resolved from gateway addresses, and pool/virtual statistics are merged with their configuration — so you get a clean, filterable spreadsheet instead of raw, deeply nested JSON.
+`f5report` reads a set of JSON files exported from an F5 BIG-IP device's iControl REST API (virtual servers, pools, nodes, self-IPs, routes, SSL certificates and LTM statistics) and builds a single, multi-sheet `.xlsx` report.
 
-It is particularly useful for **documentation, audits and migration activities**, where having the full LTM configuration and its live status laid out in one workbook makes it much easier to review than digging through the API output or the CLI.
+It is particularly useful for **documentation, assessment, audits and migration activities**, where having the full LTM configuration and its live status laid out in one workbook makes it much easier to review than digging through the API output, CLI or GUI.
 
 ---
 
