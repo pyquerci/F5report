@@ -1,6 +1,6 @@
 # f5report
 
-A command-line tool to generate a structured LTM report from F5 BIG-IP JSON files.
+A command-line tool to export the main information from an F5 BIG-IP device to an Excel report.
 
 ---
 
