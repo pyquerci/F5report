@@ -45,7 +45,7 @@ A pre-compiled Windows executable is included in the repository, built with PyIn
 pyinstaller --onefile f5report.py
 ```
 
-No Python installation is needed, just download and run f5finder.exe. For convenience, you can add it to a folder in your system PATH to invoke it from any directory; for example, I keep mine in C:\Tools\f5report.
+No Python installation is needed, just download and run f5report.exe. For convenience, you can add it to a folder in your system PATH to invoke it from any directory; for example, I keep mine in C:\Tools\f5report.
 
 ---
 
