@@ -121,6 +121,8 @@ The GIF below shows the export in action: `f5report` generating the xlsx report 
 
 ![f5report demo](f5report.gif)
 
+The generated information has been withheld for privacy reasons.
+
 ---
 
 ## Production Testing and Compatibility
