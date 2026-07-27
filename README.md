@@ -111,7 +111,15 @@ f5report.py -a
 
 ## How It Works
 
-For each of the 8 JSON files, `f5report` extracts the main information and writes it to a dedicated sheet in the Excel report: `VIPs`, `POOLs`, `NODEs`, `DCs`, `IFs`, `ROUTEs`, `VSTATs` and `PSTATs`. Along the way, a few values are cleaned up to make them easier to read, partition prefixes are stripped from names, netmasks are converted to CIDR prefixes, and statistics are matched to the corresponding VIP, pool or member. Each sheet has a frozen header row and an autofilter enabled, so you can sort and filter the data directly in Excel.
+For each of the 8 JSON files, `f5report` extracts the main information and writes it to a dedicated sheet in the Excel report: `VIPs`, `POOLs`, `NODEs`, `DCs`, `IFs`, `ROUTEs`, `VSTATs` and `PSTATs`. Along the way, a few values are cleaned up to make them easier to read, partition prefixes are stripped from names, netmasks are converted to CIDR prefixes, and statistics are matched to the corresponding VIP, pool or member.
+
+Each sheet has a frozen header row and an autofilter enabled, so you can sort and filter the data directly in Excel.
+
+### Example
+
+The GIF below shows the export in action: `f5report` generating the xlsx report from the JSON input files. Before opening it in Excel, the file was also processed with [`xlfit`](https://github.com/pyquerci/xlfit), another tool of mine that auto-fits rows and columns, to keep the sheets readable without having to resize everything by hand.
+
+![f5report demo](f5report.gif)
 
 ---
 
