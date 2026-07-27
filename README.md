@@ -117,7 +117,7 @@ Each sheet has a frozen header row and an autofilter enabled, so you can sort an
 
 ### Example
 
-The GIF below shows the export in action: `f5report` generating the xlsx report from the JSON input files. Before opening it in Excel, the file was also processed with [`xlfit`](https://github.com/pyquerci/xlfit), another tool of mine that auto-fits rows and columns, to keep the sheets readable without having to resize everything by hand.
+The GIF below shows the export in action: `f5report` generating the xlsx report from the JSON input files. Before opening it in Excel, the file was also processed with [`XlFit`](https://github.com/pyquerci/xlfit), another tool of mine that auto-fits rows and columns, to keep the sheets readable without having to resize everything by hand.
 
 ![f5report demo](f5report.gif)
 
