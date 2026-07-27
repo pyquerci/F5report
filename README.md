@@ -121,7 +121,7 @@ The GIF below shows the export in action: `f5report` generating the xlsx report 
 
 ![f5report demo](f5report.gif)
 
-The generated information has been withheld for privacy reasons.
+Sensitive information has been redacted for privacy reasons.
 
 ---
 
