@@ -121,7 +121,11 @@ The GIF below shows the export in action: `f5report` generating the xlsx report 
 
 ![f5report demo](f5report.gif)
 
-Sensitive information has been redacted for privacy reasons.
+This clear configuration view also makes it easy to implement additiona analysis. Here's a manually-drawn one, the L3 topology for route domain (RD) 4, based on the report's data, created with Visio.
+
+![f5report demo](f5report.png)
+
+Sensitive information has been redacted or completely changed for privacy reasons.
 
 ---
 
