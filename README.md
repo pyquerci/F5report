@@ -34,7 +34,6 @@ It is particularly useful for **documentation, assessment, audits and migration 
 ```
 git clone https://github.com/pyquerci/f5report.git
 cd f5report
-pip install xlsxwriter
 ```
 
 ### Windows
