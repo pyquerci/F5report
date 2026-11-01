@@ -40,7 +40,10 @@ It is particularly useful for **documentation, assessment, audits and migration 
 ```
 git clone https://github.com/pyquerci/f5report.git
 cd f5report
+pip install -r requirements.txt
 ```
+
+Install the third-party packages via pip and run it directly with Python from the project directory.
 
 ### Windows
 
