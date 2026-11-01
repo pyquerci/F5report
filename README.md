@@ -151,16 +151,23 @@ This project is licensed under the **GNU General Public License v3.0 (GPLv3)**. 
 
 ## Donations
 
-If you value the work and want to help support its development, feel free to make a donation. Your support will be greatly appreciated:
+If you value the work and want to help support its development, feel free to make a donation. Your support will be greatly appreciated.
+
+### PayPal and Buy Me a Coffee
+
+The quick way, with a PayPal account or a credit/debit card through Buy Me a Coffee:
 
 [![PayPal](https://img.shields.io/badge/PayPal-donate-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/pyquerci)
 [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-support-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=white&labelColor=404040)](https://buymeacoffee.com/pyquerci)
 
-**Bank transfer** — within the EU and the rest of the SEPA area it is usually free on both sides, depending on your bank, and every cent arrives:
+### Bank transfer
+
+Another option is a bank transfer, where no platform takes a cut. Within the EU and the rest of the SEPA area it is usually free on both sides, depending on your bank, and every cent arrives:
 
 | Field | Value |
 | --- | --- |
 | IBAN | `IT60Y0347501605000338088206` |
 | BIC/SWIFT | `INGBITD1XXX` |
 | Account holder | Andrea Querci |
+
 
