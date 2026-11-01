@@ -124,11 +124,11 @@ Each sheet has a frozen header row and an autofilter enabled, so you can sort an
 
 The GIF below shows the export in action: `f5report` generating the xlsx report from the JSON input files. Before opening it in Excel, the file was also processed with [`XlFit`](https://github.com/pyquerci/xlfit), another tool of mine that auto-fits rows and columns, to keep the sheets readable without having to resize everything by hand.
 
-![f5report demo](f5report.gif)
+![f5report demo](demo.gif)
 
 This clear configuration view also makes it easy to implement additiona analysis. Here's a manually-drawn one, the L3 topology for route domain (RD) 4, based on the report's data, created with Visio.
 
-![f5report demo](f5report.png)
+![f5report demo](demo.png)
 
 Sensitive information has been redacted or completely changed for privacy reasons.
 
